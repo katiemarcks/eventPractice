@@ -1,9 +1,25 @@
+// var grandParent = document.querySelector(".grandparent");
+// var parent = document.querySelector(".parent");
+// var button = document.querySelector("#click-me");
+
+// button.addEventListener("click", logEvent);
+
+// function logEvent() {
+//   console.log(this);
+// }
+
 var grandParent = document.querySelector(".grandparent");
 var parent = document.querySelector(".parent");
 var button = document.querySelector("#click-me");
 
-button.addEventListener("click", logEvent);
+grandParent.addEventListener("click", function () {
+  console.log("Grandparent");
+});
 
-function logEvent() {
-  console.log(this);
-}
+parent.addEventListener("click", function () {
+  console.log("Parent");
+});
+
+button.addEventListener("click", function () {
+  console.log("Button");
+});
